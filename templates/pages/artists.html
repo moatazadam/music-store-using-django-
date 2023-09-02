@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+{% block content %}
+
+				<div class="content">
+					<!--start-cartires-page---->
+					<div class="Cartires">
+						<h5><span>Our</span> Artists</h5>
+						
+						<div class="cartires-grids">
+							{% for x in artist %}
+							<div class="cartire-grid">
+								
+								<div class="cartire-grid-img">
+									
+									<img src="{{x.image.url}}" title="tries" />
+								</div>
+								<div class="cartire-grid-info">
+									<ul>
+										<li><span>New</span> |&nbsp;&nbsp;Available !</li>
+									</ul>
+									<h3> {{x.name}} </h3>
+									<p>{{x.bio}}</p>
+							</div>
+								<div class="cartire-grid-cartinfo">
+									
+								</div>
+								<div class="clear"> </div>
+								
+							</div><br />
+							{% endfor %}
+
+							</div><br />
+						</div>
+						
+					</div>
+					<!--End-cartires-page---->
+				</div>
+			<div class="clear"> </div>
+		</div>
+			
+{% endblock %}

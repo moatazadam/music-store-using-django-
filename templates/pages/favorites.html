@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<!---start-wrap--->
+<div class="wrap">
+    
+        <div class="content">
+            <div class="products-box">
+            <div class="products">
+                <h5><span>Our </span>Favorites</h5>
+
+                <div class="section group">
+                    {% for x in fav %}
+                    <div class="grid_1_of_5 images_1_of_5">
+                         <img src="{{x.image.url}}">
+                         <h3>{{x.title}} </h3>
+                         <p>{{x.description}}</p>
+                         <h4>${{x.newprice}}</h4>
+                         <div class="button"><span><a href="{% url 'singlepage' x.id %}">Read More</a></span></div>
+                   </div>
+                   {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    <div class="clear"> </div>
+    
+</div>
+<!---End-wrap--->
+
+{% endblock content %}
